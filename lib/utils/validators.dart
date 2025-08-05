@@ -35,3 +35,17 @@ String? validatePassword(String? value) {
   // Return null if the password is valid.
   return null;
 }
+
+/// Validates a generic text field.
+///
+/// [fieldName] is the name of the field being validated (e.g., "Name", "Username").
+/// Returns an error message if the field is empty, otherwise returns null.
+String? validateGenericField(String? value, String fieldName) {
+  // Check if the value is null or empty.
+  if (value == null || value.isEmpty) {
+    return 'Please enter your $fieldName';
+  }
+  // Return null if the field is not empty.
+  // TODO: Add more specific validation rules if needed (e.g., min/max length, allowed characters).
+  return null;
+}
