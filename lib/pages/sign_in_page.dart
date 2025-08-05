@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futurejob/generated/assets.dart';
+import 'package:futurejob/pages/sign_up_page.dart';
 import 'package:futurejob/theme.dart';
 import 'package:futurejob/utils/validators.dart';
 import 'package:futurejob/widgets/custom_text_field.dart';
@@ -133,9 +134,7 @@ class _SignInPageState extends State<SignInPage> {
         SizedBox(
           width: double.infinity,
           child: TextButton(
-            onPressed: () {
-              // TODO: Navigate to sign up page
-            },
+            onPressed: () => Navigator.pushNamed(context, SignUpPage.routeName),
             child: Text(
               'Create New Account',
               style: TextStyle(color: kGreyColor),
