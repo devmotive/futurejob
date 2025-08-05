@@ -44,6 +44,9 @@ class MyApp extends StatelessWidget {
             side: BorderSide(width: 1),
           ),
         ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(overlayColor: Colors.transparent),
+        ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: kLightGreyColor,
