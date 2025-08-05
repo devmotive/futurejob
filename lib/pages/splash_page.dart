@@ -7,6 +7,8 @@ import 'package:futurejob/theme.dart';
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
+  static const routeName = '/';
+
   @override
   State<SplashPage> createState() => _SplashPageState();
 }

@@ -5,6 +5,8 @@ import 'package:futurejob/theme.dart';
 class StartedPage extends StatelessWidget {
   const StartedPage({super.key});
 
+  static const routeName = '/started';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
