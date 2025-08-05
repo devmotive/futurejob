@@ -58,6 +58,10 @@ class MyApp extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
             borderSide: BorderSide(color: kRedColor),
           ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(100),
+            borderSide: BorderSide(color: kRedColor),
+          ),
           contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         ),
       ),
