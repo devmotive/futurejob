@@ -16,7 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(),
+        textSelectionTheme: TextSelectionThemeData(cursorColor: kIndigoColor),
+        textTheme: GoogleFonts.poppinsTextTheme().copyWith(
+          bodyLarge: TextStyle(
+            fontSize: 16,
+            fontWeight: regular,
+            color: kIndigoColor,
+          ),
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             overlayColor: Colors.transparent,
@@ -35,6 +42,23 @@ class MyApp extends StatelessWidget {
             ),
             side: BorderSide(width: 1),
           ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: kLightGreyColor,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(100),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(100),
+            borderSide: BorderSide(color: kIndigoColor),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(100),
+            borderSide: BorderSide(color: kRedColor),
+          ),
+          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         ),
       ),
       routes: {
