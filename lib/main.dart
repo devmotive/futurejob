@@ -3,11 +3,18 @@ import 'package:futurejob/pages/sign_in_page.dart';
 import 'package:futurejob/pages/sign_up_page.dart';
 import 'package:futurejob/pages/splash_page.dart';
 import 'package:futurejob/pages/started_page.dart';
+import 'package:futurejob/providers/image_picker_provider.dart';
 import 'package:futurejob/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => ImagePickerProvider())],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
