@@ -1,9 +1,29 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:futurejob/generated/assets.dart';
 import 'package:futurejob/theme.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 3),
+      () => Navigator.pushNamedAndRemoveUntil(
+        context,
+        '/sign-in',
+        (route) => false,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
