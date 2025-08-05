@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:futurejob/pages/home_page.dart';
 import 'package:futurejob/providers/image_picker_provider.dart';
 import 'package:futurejob/theme.dart';
 import 'package:futurejob/utils/validators.dart';
@@ -153,6 +154,7 @@ class _SignUpPageState extends State<SignUpPage> {
               title: 'Your Goal',
               controller: _goalController,
               validator: (value) => validateGenericField(value, 'Your Goal'),
+              textInputAction: TextInputAction.done,
             ),
           ],
         ),
@@ -186,18 +188,39 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  // Validates the form and attempts to sign up the user
+  // Validates the form and the picked image, then navigates to the home page if valid.
   void _validateAndSignUp() {
-    // Trigger validation for all form fields
-    // This checks if all the input fields in the form meet the defined validation criteria.
+    // Validate the form fields using the form key.
     final isValid = _formKey.currentState!.validate();
+    // Get the picked image from the ImagePickerProvider.
+    final pickedImage = context.read<ImagePickerProvider>().selectedImage;
+
+    // If the form is not valid, enable autovalidation and return.
     if (!isValid) {
-      // If form is not valid, set autovalidateMode to always to show errors
-      // This ensures that validation messages are displayed for invalid fields
-      // as the user interacts with them after the initial submission attempt.
       setState(() => _autoValidateMode = AutovalidateMode.always);
       return;
     }
+
+    // If no image is picked, show a SnackBar and return.
+    if (pickedImage == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Please select a profile image'),
+          backgroundColor: kRedColor,
+          // Makes the SnackBar float above the bottom navigation bar (if any).
+          behavior: SnackBarBehavior.floating,
+          // TODO: Consider adding an action to the SnackBar to allow users to pick an image directly.
+        ),
+      );
+      return;
+    }
+
     // TODO: Implement the actual sign-up logic (e.g., API call) if the form is valid.
+    Navigator.pushNamedAndRemoveUntil<void>(
+      context,
+      HomePage.routeName,
+      // Remove all previous routes from the stack.
+      (route) => false,
+    );
   }
 }
