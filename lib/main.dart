@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+            overlayColor: Colors.transparent,
             textStyle: TextStyle(fontSize: 14, fontWeight: medium),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadiusGeometry.circular(66),
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
+            overlayColor: Colors.transparent,
             textStyle: TextStyle(fontSize: 14, fontWeight: medium),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadiusGeometry.circular(66),
