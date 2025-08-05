@@ -112,6 +112,7 @@ class _SignInPageState extends State<SignInPage> {
             title: 'Password',
             controller: _passwordController,
             validator: validatePassword,
+            textInputAction: TextInputAction.done,
           ),
         ],
       ),
