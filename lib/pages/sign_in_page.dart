@@ -59,6 +59,7 @@ class _SignInPageState extends State<SignInPage> {
     return Container(
       margin: const EdgeInsets.only(top: 30),
       child: Column(
+        spacing: 2,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
@@ -99,13 +100,13 @@ class _SignInPageState extends State<SignInPage> {
       key: _formKey,
       autovalidateMode: _autoValidateMode,
       child: Column(
+        spacing: 20,
         children: [
           CustomTextField(
             title: 'Email Address',
             controller: _emailController,
             validator: validateEmail,
           ),
-          const SizedBox(height: 20),
           CustomTextField(
             title: 'Password',
             controller: _passwordController,
