@@ -8,3 +8,10 @@ Color kGreyColor = Color(0xffB3B5C4);
 Color kLightGreyColor = Color(0xffF1F0F5);
 Color kBlackColor = Color(0xff272C2F);
 Color kRedColor = Color(0xffFD4F56);
+
+// Font Weights
+FontWeight light = FontWeight.w300;
+FontWeight regular = FontWeight.w400;
+FontWeight medium = FontWeight.w500;
+FontWeight semiBold = FontWeight.w600;
+FontWeight bold = FontWeight.w700;
