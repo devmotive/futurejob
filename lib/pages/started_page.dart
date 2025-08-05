@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:futurejob/generated/assets.dart';
 import 'package:futurejob/theme.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class StartedPage extends StatelessWidget {
+  const StartedPage({super.key});
 
   @override
   Widget build(BuildContext context) {

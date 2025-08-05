@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:futurejob/pages/sign_in_page.dart';
+import 'package:futurejob/pages/started_page.dart';
 import 'package:futurejob/pages/splash_page.dart';
 import 'package:futurejob/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => SplashPage(),
-        '/sign-in': (context) => SignInPage(),
+        '/started': (context) => StartedPage(),
       },
     );
   }
