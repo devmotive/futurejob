@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:futurejob/generated/assets.dart';
+import 'package:futurejob/pages/started_page.dart';
 import 'package:futurejob/theme.dart';
 
 class SplashPage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SplashPageState extends State<SplashPage> {
       Duration(seconds: 3),
       () => Navigator.pushNamedAndRemoveUntil(
         context,
-        '/started',
+        StartedPage.routeName,
         (route) => false,
       ),
     );
