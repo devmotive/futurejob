@@ -7,6 +7,7 @@ class CustomTextField extends StatelessWidget {
     required this.title,
     required this.controller,
     required this.validator,
+    this.textInputAction = TextInputAction.next,
   });
 
   // The title of the text field.
@@ -17,6 +18,9 @@ class CustomTextField extends StatelessWidget {
 
   // The validator for the text field.
   final String? Function(String?)? validator;
+
+  // The text input action for the text field.
+  final TextInputAction textInputAction;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +43,7 @@ class CustomTextField extends StatelessWidget {
           TextFormField(
             validator: validator,
             controller: controller,
+            textInputAction: textInputAction,
             obscureText: title.toLowerCase().contains('password'),
             keyboardType: title.toLowerCase().contains('email')
                 ? TextInputType.emailAddress
