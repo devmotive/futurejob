@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futurejob/pages/splash_page.dart';
+import 'package:futurejob/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -12,8 +13,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(textTheme: GoogleFonts.poppinsTextTheme()),
-      routes: {'/': (context) => const SplashPage()},
+      theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            textStyle: TextStyle(fontSize: 14, fontWeight: medium),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(66),
+            ),
+          ),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+            textStyle: TextStyle(fontSize: 14, fontWeight: medium),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(66),
+            ),
+            side: BorderSide(width: 1),
+          ),
+        ),
+      ),
+      routes: {'/': (context) => SplashPage()},
     );
   }
 }
