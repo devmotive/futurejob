@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futurejob/generated/assets.dart';
+import 'package:futurejob/pages/sign_in_page.dart';
 import 'package:futurejob/theme.dart';
 
 class StartedPage extends StatelessWidget {
@@ -71,7 +72,9 @@ class StartedPage extends StatelessWidget {
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(color: kWhiteColor),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, SignInPage.routeName);
+                      },
                       child: Text(
                         'Sign In',
                         style: TextStyle(color: kWhiteColor),
