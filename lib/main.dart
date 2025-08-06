@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futurejob/pages/category_page.dart';
+import 'package:futurejob/pages/detail_page.dart';
 import 'package:futurejob/pages/home_page.dart';
 import 'package:futurejob/pages/sign_in_page.dart';
 import 'package:futurejob/pages/sign_up_page.dart';
@@ -85,6 +86,7 @@ class MyApp extends StatelessWidget {
         SignUpPage.routeName: (context) => SignUpPage(),
         HomePage.routeName: (context) => HomePage(),
         CategoryPage.routeName: (context) => CategoryPage(),
+        DetailPage.routeName: (context) => DetailPage(),
       },
     );
   }
