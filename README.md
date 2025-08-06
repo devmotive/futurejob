@@ -1,12 +1,5 @@
 # FutureJob
 
-**FutureJob** is a modern, cleanly designed furniture app built with Flutter.
-This project focuses purely on UI slicing and does not include any backend integration or local data storage.
-
-> *“Elegant UI for a digital furniture shopping experience.”*
-
----
-
 ## 🧭 Table of Contents
 
 * [📱 Preview](#-preview)
