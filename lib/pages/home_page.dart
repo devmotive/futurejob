@@ -69,6 +69,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: _bottomNavigationBar(),
     );
   }
 
@@ -198,6 +199,36 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  /// Builds the bottom navigation bar for the HomePage.
+  /// Displays icons for Home, Notification, Favorite, and Profile.
+  // TODO: Implement navigation functionality for bottom navigation bar items.
+  Widget _bottomNavigationBar() {
+    return BottomNavigationBar(
+      backgroundColor: kWhiteColor,
+      type: BottomNavigationBarType.fixed,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      items: [
+        BottomNavigationBarItem(
+          icon: Image.asset(Assets.assetsIconHome, width: 24),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Image.asset(Assets.assetsIconNotification, width: 24),
+          label: 'Notification',
+        ),
+        BottomNavigationBarItem(
+          icon: Image.asset(Assets.assetsIconFavorite, width: 24),
+          label: 'Favorite',
+        ),
+        BottomNavigationBarItem(
+          icon: Image.asset(Assets.assetsIconProfile, width: 24),
+          label: 'Profile',
+        ),
+      ],
     );
   }
 }
