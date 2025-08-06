@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:futurejob/pages/detail_page.dart';
 import 'package:futurejob/theme.dart';
 
 class JobTile extends StatelessWidget {
@@ -21,6 +22,8 @@ class JobTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      // TODO: Implement actual navigation to DetailPage with job details.
+      onTap: () => Navigator.pushNamed(context, DetailPage.routeName),
       contentPadding: EdgeInsets.zero,
       // Leading widget is displayed at the beginning of the ListTile.
       // TODO: Add error handling for image loading (e.g., placeholder or error widget).
