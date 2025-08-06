@@ -178,9 +178,7 @@ class _SignUpPageState extends State<SignUpPage> {
         SizedBox(
           width: double.infinity,
           child: TextButton(
-            onPressed: () {
-              // TODO: Navigate to sign up page
-            },
+            onPressed: () => Navigator.pop(context),
             child: Text('Back to Sign In', style: TextStyle(color: kGreyColor)),
           ),
         ),
