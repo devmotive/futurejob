@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futurejob/generated/assets.dart';
+import 'package:futurejob/pages/category_page.dart';
 import 'package:futurejob/theme.dart';
 import 'package:futurejob/widgets/category_card.dart';
 import 'package:futurejob/widgets/job_tile.dart';
@@ -146,17 +147,22 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: _jobCategories.length,
               separatorBuilder: (context, index) => SizedBox(width: 16),
-              itemBuilder: (context, index) {
-                // Add padding to the right of the last item to ensure consistent spacing.
-                if (index == _jobCategories.length - 1) {
-                  return Padding(
-                    padding: EdgeInsets.only(right: 16),
-                    child: _jobCategories[index],
-                  );
-                } else {
-                  return _jobCategories[index];
-                }
-              },
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, CategoryPage.routeName);
+                },
+                child: () {
+                  // Add padding to the right of the last item to ensure consistent spacing.
+                  if (index == _jobCategories.length - 1) {
+                    return Padding(
+                      padding: EdgeInsets.only(right: 16),
+                      child: _jobCategories[index],
+                    );
+                  } else {
+                    return _jobCategories[index];
+                  }
+                }(),
+              ),
             ),
           ),
         ],
